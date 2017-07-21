@@ -1,0 +1,609 @@
+--常用的SQL
+8849503
+
+--ESB
+select * from administrator.ESB_HISDATA where msgkeyid='8849503';
+select * from administrator.ESB_RESPDATA where msgkeyid='8849503';
+--EC
+select * from orders where orders_id=8849503;
+select * from orderitems where orders_id=8709326;
+select * from xtaobaoorders where ;
+select * from xtaobaotrades where ;
+select * from rma where REFUNDAGAINSTORDID='5771117';
+select * from xrefunds where EORDERID='5771117';
+select * from ffmcenter
+select * from store
+--退货
+select * from rma where REFUNDAGAINSTORDID='8824091';
+--退款
+select * from xrefunds where EORDERID='8824091';
+field2字段3表示退款完成，2为退款取消，0为申请退款
+ORDERTYPE里面的L缺货，PRG为退货，x为取消
+查退货退款明细
+——————————————————————————————
+查退款取消的订单（也就是a.field2=0）
+select 
+case 
+when ordertype='L' then '缺货'
+when ordertype='PRG' then '退货'
+when ordertype='x' then '取消'
+else 'other' end,
+a.* from xrefunds a join orders b on a.eorderid=b.orders_id where 
+a.REFUNDTIME>='2016-01-01' and a.REFUNDTIME <='2017-03-23'  and a.field2=0
+and b.STOREENT_ID=10153
+and a.ordertype in('PRG','L','x')
+——————————————————————————————
+
+select b.refunds_id,a.rma_id,a.REFUNDAGAINSTORDID,a.rmadate,a.totalcredit,a.lastupdate from rma a left join xrefunds b on a.rma_id=b.rma_id where  a.store_id='15255'
+and a.rmadate>='2016-07-01 0:00:00' order by a.rmadate,a.REFUNDAGAINSTORDID
+
+
+--查看三品牌的数量
+select  distinct status from orders where 
+lastupdate>'2016-10-14' 
+and status<>'X' and storeent_id in(10152,10651,13251)
+
+
+--三品牌天猫订单分到门店的库存
+
+--
+--订单来源（线上包括淘宝及官网的）
+
+--xordiextdata 表的field4是门店号(中间表，数据来源)使用xordiextdata表的field4字段标记订单项的来源，如果为空不指定门店发货，如果为门店ID号，则由指定门店发货，即自提
+select storeent_id,a.orders_id,b.field4,count(*)
+from orders a join xordiextdata b on a.orders_id=b.orders_id 
+where a.lastupdate>'2016-10-14' and storeent_id in(10152,10651,13251) 
+and b.field4 is not null group by storeent_id,a.orders_id,b.field4;
+
+--xtaobaoorders的field3字段标记订单项的来源，如果为空不指定门店发货，如果为门店ID号，则由指定门店发货，即自提
+select distinct field3 from xtaobaoorders;
+--xtaobaotrades的field3字段标记订单来源，如果为空为线上订单，如果为非零的数据，则代表由哪个门店下的单
+select * from xtaobaotrades where tid='50069138';--tid对应的就是外部单号
+select field3 from xtaobaotrades;
+---
+select *from xtaobaoorders where tid='25376563827173426';
+select *from xtaobaotrades where tid='25376563827173426';
+
+
+
+--xtaobaotrades的field3字段标记订单来源，如果为空为线上订单，如果为非零的数据，则代表由哪个门店下的单
+select distinct field3 from xtaobaotrades;
+
+--orderitems的inventorystatus为ALLC是已分配，是BO就是已释放(针对订单所占用的库存)
+
+--orderitems表的field1字段标记该订单项分配给该门店
+select distinct field1 from orderitems
+
+--orderitems表的description记录是否自提，值为specified表示指定了门店自提
+select distinct description from orderitems
+
+--分到电商仓可以看orderitems表的FFMCENTER_ID（仓位id）
+select ffmcenter_id,orders_id,storeent_id,count(*) from orderitems 
+where lastcreate>'2016-10-14' and storeent_id in(10152,10651,13251)  
+group by ffmcenter_id,orders_id,storeent_id
+
+--分到门店可以看oms表oms_delivery.delivery_info或者ec表xordiextdata的field4字段
+select distinct field4 from xordiextdata
+
+--仓位信息
+select ffmcenter_id,name from ffmcenter;
+
+--查已发货的并且是门店发货的ffmcenter表的name字段为POS_ASSET_STORE（ID=18553）表示是门店发货(其他的就都是仓库发货的)
+select a.ffmcenter_id,b.name,a.orders_id from orderitems a join ffmcenter b 
+on a.ffmcenter_id=b.ffmcenter_id
+where a.lastupdate>'2016-10-14' and a.status='D' and b.name='POS_ASSET_STORE'
+--根据订单查询该订单分配到了哪个仓库
+select a.ffmcenter_id,b.name,a.* from orderitems a join ffmcenter b 
+on a.ffmcenter_id=b.ffmcenter_id
+where  a.orders_id='11566785'
+select * from ffmcenter
+--订单拆分情况field1字段1为拆分后的子单，2为原订单，为空或其他值表示订单未拆分,并且field2为1则为锁定，
+select * from orders where field1=1
+
+--所有门店发货，来源包括了线上与门店下的单
+select count(distinct(orders_id)) from (
+select orders_id from orderitems where ffmcenter_id='18553'  and lastcreate >'2017-03-01' and lastcreate <'2017-04-01'
+and status !='X'
+)
+
+
+--原拆分的订单为取消状态数量
+select count(*) from orders where status='X' and field1=2;
+--原订单拆分的数量
+select count(*)from orders where field1=2;--or field1=1
+--未拆分的订单状态
+select count(*)  from orders where field1=null or field1=0;
+
+INVENTORYSTATUS
+ALLC
+AVL 
+BO  
+NALC
+--格式化查询结果
+select count(*),
+CASE WHEN storeent_id = 10152 THEN 'OCH'
+         WHEN storeent_id = 10651 THEN '5+'
+         when storeent_id = 13251 THEN 'tre'
+ELSE 'aaa' END
+from orders where storeent_id in(10152,10651,13251)
+group by storeent_id
+
+--在京东上的三大品牌，按说快递应该用京东自己的，但是有些订单却是使用了别的快递方式
+select  a.storeent_id,
+case when a.storeent_id=11152 then 'FivePlusJingDong'
+when a.storeent_id=11151 then 'OChirlyJingDong'
+when a.storeent_id=17751 then 'TrendianoJingDong'
+else 'other' end,
+a.orders_id,b.field5,a.timeplaced
+from orders a join xordextdata b on a.orders_id=b.orders_id 
+where a.timeplaced between '2016-09-29' and  '2016-09-30'
+and a.storeent_id in(11152,11151,17751) and field5<>'JD'
+
+--
+--这个表里的货到付款就肯定是用到京东的快递
+select * from xjdorders where paytype='1-货到付款'
+
+
+--关联 xjdorders 1-货到付款这个表
+select  a.storeent_id,c.paytype,
+case when a.storeent_id=11152 then 'FivePlusJingDong'
+when a.storeent_id=11151 then 'OChirlyJingDong'
+when a.storeent_id=17751 then 'TrendianoJingDong'
+else 'other' end,
+a.orders_id,b.field5,a.timeplaced
+from orders a left join xordextdata b on a.orders_id=b.orders_id
+left join xjdorders c on a.ormorder=c.orderid
+where a.timeplaced between '2016-09-29' and  '2016-09-30' and
+a.storeent_id in(11152,11151,17751)
+and c.paytype='1-货到付款'
+
+
+select * from rma where REFUNDAGAINSTORDID='5771117';(rmd_id为退货号)
+select * from xrefunds where EORDERID='5771117';
+select * from rma where  status='RSO' and rmadate between '2016-07-19' and '2016-07-26' 
+
+
+
+--退货
+退货状态
+PRG=申请退货
+RSO=等待退货
+ERR=退货不符
+RCV=已收退货
+CAN=退货取消
+
+--3月份退货单数
+select count(distinct REFUNDAGAINSTORDID) from rma  where REFUNDAGAINSTORDID in(
+select orders_id From orders where  TIMEPLACED >'2017-03-01' and TIMEPLACED <'2017-04-01' and status!='X'
+)and status !='CAN'
+
+--查看物流快递信息
+select * from xordextdata where field2='VC31003687131'
+
+--查找系统未自动创建退单而且是手动创建退单的订单号，系统未自动退单那么在xrefunds退款表里就没有记录，而手动创建的就在这个表里有记录
+select * from xrefunds where refundtime between '2016-10-15' and  '2016-10-20'
+and eorderid in
+(
+select a.orders_id
+from orders a  join xordextdata b on a.orders_id=b.orders_id
+join xjdorders c on a.ormorder=c.orderid
+where a.storeent_id in(11152,11151,17751)
+and c.paytype='1-货到付款'
+);
+
+--查找系统自动创建拒收的退单（xrefunds退款单里没记录就是系统自动创建的，因为拒收时就没有收款凭证的）
+select * from rma a where not exists (select eorderid from xrefunds b where a.refundagainstordid=b.eorderid) 
+and a.lastupdate between '2016-10-18' and '2016-10-20'
+
+
+--订单号与分到门店相关联
+select a.ORDERS_ID 内部订单号,a.ORMORDER 外部订单号,a.STOREENT_ID 渠道,TOTALPRODUCT+TOTALADJUSTMENT+TOTALSHIPPING 总_折扣_邮费,
+a.STATUS 状态,a.TIMEPLACED 创建时间,a.LASTUPDATE 更新时间,b.FIELD4 分到门店,a.FIELD1 是否拆分,a.DESCRIPTION 
+from orders a join xordiextdata b on a.ORDERS_ID=b.ORDERS_ID where a.ORDERS_ID='8878201'
+--根据上面的门店号找对应的门店
+select * from oms_shop.shop_info where shop_number='T060'
+上面的sql去重
+select * from (
+select a.ORDERS_ID 内部订单号,a.ORMORDER 外部订单号,a.STOREENT_ID 渠道,TOTALPRODUCT+TOTALADJUSTMENT+TOTALSHIPPING 总_折扣_邮费,
+a.STATUS 状态,a.TIMEPLACED 创建时间,a.LASTUPDATE 更新时间,b.FIELD4 分到门店,a.FIELD1 是否拆分,
+ rank() over(partition by a.ORDERS_ID order by a.ORMORDER) as rank
+from orders a join xordiextdata b on a.ORDERS_ID=b.ORDERS_ID 
+group by a.ORDERS_ID,a.ORMORDER,a.STOREENT_ID,TOTALPRODUCT+TOTALADJUSTMENT+TOTALSHIPPING,
+a.STATUS,a.TIMEPLACED,a.LASTUPDATE,b.FIELD4,a.FIELD1) where rank=1
+
+--查找FPtaobaoB的，并且是7月16到29号之间的，然后是仓库发货的订单，查找的字段是退货号rma_id,refundagainstordid是EC单号
+select  distinct rma_id,''''||orders_id||''',' from rma a join   orderitems b on a.refundagainstordid=b.orders_id
+where a.rmadate between '2016-07-19' and '2016-07-26' and a.store_id ='10651' and a.status='PRG'
+and b.ffmcenter_id<>18553
+
+---------------------------------------------------------------------------------------------------------------------------------------
+--xtaobao某店销售额：
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='10152';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='10651';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='13251';
+--某店总销售额：
+select sum(TOTALPRODUCT) 总金额 from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='10152';
+select sum(TOTALADJUSTMENT) 减免金额 from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='10152';
+select sum(TOTALPRODUCT) from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='10651';
+select sum(TOTALADJUSTMENT) from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='10651';
+select sum(TOTALPRODUCT) from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='13251';
+select sum(TOTALADJUSTMENT) from orders where TIMEPLACED>'2015-11-11' and STOREENT_ID='13251';
+
+--未拆单+子单：
+select * from orders where TIMEPLACED>'2016-10-19' and FIELD1 !='2';
+--未拆单+子单+待发货：
+select * from orders where TIMEPLACED>'2016-10-19' and FIELD1 !='2' and status not in ('X');
+--拆分后的原订单：
+select * from orders where TIMEPLACED>'2016-10-19' and FIELD1 ='2';
+
+--天猫三店 未拆单+子单 分去什么门店：
+select  distinct a.ORDERS_ID,a.ORMORDER,a.STOREENT_ID,TOTALPRODUCT+TOTALADJUSTMENT+TOTALSHIPPING,a.STATUS,a.TIMEPLACED,a.LASTUPDATE,b.FIELD4,a.FIELD1 from orders a join xordiextdata b on a.ORDERS_ID=b.ORDERS_ID 
+where  a.TIMEPLACED>'2016-10-18' and a.STOREENT_ID in ('10152','10651','13251') and a.FIELD1 !='2' and b.FIELD4 is not null
+
+
+--天猫三店分去门店订单的数量：
+select count(*) from (
+select  distinct a.ORDERS_ID,a.ORMORDER,a.STOREENT_ID,TOTALPRODUCT+TOTALADJUSTMENT+TOTALSHIPPING,a.STATUS,a.TIMEPLACED,a.LASTUPDATE,b.FIELD4,a.FIELD1 from orders a join xordiextdata b on a.ORDERS_ID=b.ORDERS_ID 
+where  a.TIMEPLACED>'2016-11-10' and a.STOREENT_ID in ('10152','10651','13251') and a.FIELD1 !='2' and b.FIELD4 is not null
+) 
+--xtaobao某店销售额：
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='10152';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='10651';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='13251';
+--xjd某店销售额：
+select sum(PAYMENT) from xjdorders where ORDERSTARTTIME>'2015-12-12' and STOREID='11151';
+select sum(PAYMENT) from xjdorders where ORDERSTARTTIME>'2015-12-12' and STOREID='11152';
+select sum(PAYMENT) from xjdorders where ORDERSTARTTIME>'2015-12-12' and STOREID='17751';
+--x官网某店销售额：
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='10151';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='11701';
+select sum(PAYMENT) from xtaobaotrades where PAY_TIME>'2015-12-12' and STORE_ID='19251'; 
+--调度查询
+
+
+select * from schstatus a join schconfig b on a.SCSJOBNBR=b.SCCJOBREFNUM where SCSACTLSTART>'2016-09-18'
+select SCSACTLSTART,SCSEND,SCSRESULT,SCCHOST,STOREENT_ID,SCCPATHINFO,SCCQUERY,SCCINTERVAL from schstatus a join schconfig b on a.SCSJOBNBR=b.SCCJOBREFNUM where SCSACTLSTART>'2016-09-18'
+select SCSACTLSTART,SCSEND,SCSRESULT,SCCHOST,STOREENT_ID,SCCPATHINFO,SCCQUERY,SCCINTERVAL from schstatus a join schconfig b on a.SCSJOBNBR=b.SCCJOBREFNUM where SCSACTLSTART>'2016-09-22' and SCCPATHINFO not in ('TmcMessageHeartBeatCmd','SendTransactedMsg','PaySynchronizePM','CleanECEvent','SendMarketingTriggers','TicklerUnlockMonitor')
+
+------
+
+select  distinct SCCPATHINFO,SCCHOST, SCSACTLSTART,SCSEND,SCSRESULT,STOREENT_ID,SCCQUERY,SCCINTERVAL from (
+select  SCCHOST, SCSACTLSTART,SCSEND,SCSRESULT,STOREENT_ID,SCCPATHINFO,SCCQUERY,SCCINTERVAL,
+rank() over(partition by SCCPATHINFO order by SCSEND) as rank
+from schstatus a join schconfig b on a.SCSJOBNBR=b.SCCJOBREFNUM 
+where SCSACTLSTART>'2016-09-18' 
+and SCCPATHINFO not in ('TmcMessageHeartBeatCmd','SendTransactedMsg','PaySynchronizePM','CleanECEvent','SendMarketingTriggers','TicklerUnlockMonitor')
+group by SCCHOST, SCSACTLSTART,SCSEND,SCSRESULT,STOREENT_ID,SCCPATHINFO,SCCQUERY,SCCINTERVAL)
+where rank=1 
+
+
+
+
+
+
+
+------
+查找所有ffmcenter的name字段是E03所对应的ffmcenter_id所对应的orderitems的oders_id号，并且orderitems的订单条目也是E03的数据，依据这个找到快递不是YT的，总共12条
+select * from xordextdata where orders_id in(
+select orders_id from (
+select distinct orders_id,lastcreate,ffmcenter_id from orderitems a 
+where exists (select ffmcenter_id  from ffmcenter b where a.ffmcenter_id=b.ffmcenter_id  and  b.name like '%E03')
+and lastcreate>'2016-11-04'
+) t where exists (select ffmcenter_id  from ffmcenter s where t.ffmcenter_id=s.ffmcenter_id  and  s.name like '%E03')
+) --and field5='YT' and orders_id='8954191'
+--下面是去掉父订单，也就是去掉status=x的
+select * from xordextdata where orders_id in(
+select orders_id from (
+select distinct orders_id,lastcreate,ffmcenter_id from orderitems a 
+where exists (select ffmcenter_id  from ffmcenter b where a.ffmcenter_id=b.ffmcenter_id and a.status<>'X'  and  b.name like '%E03')
+and lastcreate>'2016-11-04'
+) t where exists (select ffmcenter_id  from ffmcenter s where t.ffmcenter_id=s.ffmcenter_id  and  s.name like '%E03')
+) and field5='YT'
+
+---------------------------
+wms京东快递表TRDY_EXP_NBR状态
+SELECT * FROM TRDY_EXP_NBR WHERE  EXP_NBR='VC06385742462'
+这里是从京东取的一些空白的快递号，用来分配我们的快递，默认超时时间是30分钟
+状态90是已发送，95是失败
+
+---------------------------
+调拨记录
+select * from XSTOCKTRANSFERHISTORY where PARTNUMBER like 'S%' 
+
+
+----------------------------
+在WMS中大约多找一段时间的订单吧，时间提前一点，并且是B2C的订单，
+select pkt_ctrl_nbr,create_date_time from pkt_hdr t where create_date_time 
+between to_date('2016-11-08 16:00:00','yyyy-mm-dd hh24:mi:ss') and to_date('2016-11-09 20:00:00','yyyy-mm-dd hh24:mi:ss') 
+and pkt_ctrl_nbr=pro_nbr
+
+---------------------------
+--门店订单数
+SELECT 'Store Orders:' || count (DISTINCT o.orders_id) AS cnt
+  FROM orderitems oi, orders o
+ WHERE     o.orders_id = oi.orders_id
+       AND oi.FFMCENTER_ID = 18553
+       AND o.TIMEPLACED >= '2016-11-10'
+       AND o.status != 'X';
+
+--wms订单数
+SELECT 'WMS Orders:' || count (DISTINCT o.orders_id) AS cnt
+  FROM orderitems oi, orders o
+ WHERE     o.orders_id = oi.orders_id
+       AND oi.FFMCENTER_ID <> 18553
+       AND o.TIMEPLACED >= '2016-11-10'
+       AND o.status != 'X';
+
+--门店发货数
+SELECT 'Store Deliver Goods:' || count (DISTINCT o.orders_id) AS cnt
+  FROM orderitems oi, orders o
+ WHERE     o.orders_id = oi.orders_id
+       AND oi.FFMCENTER_ID = 18553
+       AND o.TIMEPLACED >= '2016-11-10'
+       AND o.status = 'D';
+
+--wms发货数
+SELECT 'WMS Deliver Goods:' || count (DISTINCT o.orders_id) AS cnt
+  FROM orderitems oi, orders o
+ WHERE     o.orders_id = oi.orders_id
+       AND oi.FFMCENTER_ID <> 18553
+       AND o.TIMEPLACED >= '2016-11-10'
+       AND o.status = 'D';
+--------------------------
+select e.DIRECTORY,a.ormorder,a.orders_id,c.partnum,d.name,c.status,a.TIMEPLACED,c.QUANTITY
+from orders a,orderitems c,ffmcenter d,store e
+where  a.timeplaced>'2016-11-01'
+and a.orders_id=c.orders_id
+and a.storeent_id in('10651','11152','22251','11701')
+and c.ffmcenter_id=d.ffmcenter_id
+and c.ffmcenter_id<>'18553'
+and e.store_id=a.storeent_id
+and c.status<>'X'
+___________________________________
+这张订单天猫是一张单，但是EC生成了两张
+select * from (
+select b.ormorder,b.orders_id,b.timeplaced,b.storeent_id,
+rank() over(partition by b.ormorder order by b.orders_id) as rank
+from orders b
+where  b.timeplaced>='2016-11-11'
+and b.storeent_id in('11151','11152','17751')
+and b.field1 not in(1,2)
+and b.status<>'X'
+)where rank>1
+--订单状态格式化，排除已发货，已取消的，所有发往E03的所有订单
+select ORDERS_ID,case
+WHEN  status= 'a' THEN '已审核'
+WHEN  status='b' THEN '已打单'
+WHEN  status='c' THEN '已拣货'
+WHEN  status='d' THEN '已打包'
+WHEN  status='D' THEN '已发货'
+WHEN  status='S' THEN '已送达'
+WHEN  status='p' THEN '挂起'
+WHEN  status='x' THEN '申请取消'
+WHEN  status='X' THEN '已取消'
+WHEN  status='I' THEN '申请退款'
+WHEN  status='g' THEN '退款中'
+WHEN  status='n' THEN '已退款'
+WHEN  status='L' THEN '缺货'
+WHEN  status='M' THEN '未支付'
+WHEN  status='C' THEN '已支付'
+WHEN  status='f' THEN '审核挂起'
+WHEN  status='E' THEN '正在处理订单'
+WHEN  status='J' THEN '废弃订单'
+WHEN  status='P' THEN '订单挂起'
+WHEN  status='h' THEN '超卖异常订单'
+WHEN  status='H' THEN '实物超卖'
+WHEN  status='z' THEN 'SAP挂起失败'
+WHEN  status='W' THEN '等待门店发货'
+else 'other' end,
+lastcreate,lastupdate,PARTNUM, QUANTITY,FFMCENTER_ID,TOTALPRODUCT+TOTALADJUSTMENT,
+case 
+WHEN storeent_id ='10152' THEN 'OchirlyTaobaoB'
+WHEN storeent_id ='10651' THEN 'FivePlusTaobaoB'
+WHEN storeent_id ='13251' THEN 'TrendianoTaobaoB'
+WHEN storeent_id ='25751' THEN 'OchrilyKidsTaobaoB'
+else 'other' end
+from orderitems  where
+lastcreate>'2016-11-11'
+and status not in('X','D')
+and FFMCENTER_ID ='18552';
+--查找SKU对应的仓库名称以数量
+select b.PARTNUMBER,a.FFMCENTER_ID,c.NAME,a.QUANTITY from inventory a  join catentry b  on a.catentry_id=b.catentry_id join 
+ ffmcenter c on a.FFMCENTER_ID=c.FFMCENTER_ID   where b.partnumber like '1%' and name ='TrendyCatalogAssetStore_E03'and quantity>0
+--在ESB中查找sap接口中有异常情况的订单，并且只提取是付款的订单，排除了退款的
+
+select  MSGKEYID from administrator.ESB_RESPDATA where ERRDATETIME>'2016122508' and SERVICEID='TXECDownpaymentService_1_00'  and ERRCODE='EXCEPTION'
+我们去
+select  disinct(MSGKEYID) from administrator.ESB_RESPDATA where ERRDATETIME>'2016122508' and SERVICEID='TXECDownpaymentService_1_00'  and ERRCODE='EXCEPTION'
+上面查的是4187条记录,并且distinct时发现仍然是4187条，则说明是没有重复的两条的。
+然后我们再去查查小于这个时间的记录，看小于这个时间的记录里面是否存在上面大于这个时间的记录，因为如果之后付款成功后，有退款的话就会在大于这个时间区间中产生一条退款记录的。我们是要排除掉退款记录，只提取已支付的订单进行重发的。
+select  count(MSGKEYID) from administrator.ESB_RESPDATA where ERRDATETIME>'2016122508' 
+and SERVICEID='TXECDownpaymentService_1_00'  and ERRCODE='EXCEPTION'
+and MSGKEYID not in
+(
+select  MSGKEYID from administrator.ESB_RESPDATA where ERRDATETIME<='2016122508' 
+and SERVICEID='TXECDownpaymentService_1_00'  and ERRCODE='SUCC'
+)
+所以这里可以说明的是，这4187记录都是已支付的订单，没有退款的。所以需要全部重发
+
+---在EC上查找库存
+select * from inventory a join catentry b on a.CATENTRY_ID=b.CATENTRY_ID where b.PARTNUMBER='672JJ435CN00G2408';
+
+--查询仓库对应关系
+select f.ffmcenter_id,f.name ffmcenter_name,x.value warehouse_id,x.pk warehouse_code,x.description warehouse_name 
+from ffmcenter f join xtrendyprop x on f.name = substr(x.pk,5) where x.pk like 'OchirlySale_Z01_%' and f.ffmcenter_id in(39651);
+--检查附件商品EC的吊牌价格是否已更新
+select b.PARTNUMBER,a.LISTPRICE from listprice a join catentry b on a.CATENTRY_ID=b.CATENTRY_ID  where PARTNUMBER like '1%'
+--下面是多个like，使用游标变量处理
+BEGIN  
+    DECLARE rel varchar(30);  
+    DECLARE allAddr varchar(30);  
+    DECLARE done bool DEFAULT false;  
+    DECLARE curl CURSOR FOR SELECT PARTNUMBER FROM catentry;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = true;  
+    OPEN curl;  
+    read_loop: LOOP
+      FETCH curl INTO rel;  
+      IF done THEN  
+        LEAVE read_loop;   
+      END IF;  
+    -- select  a.id,a.PARTNUMBER,b.price from catentry a join listprice b on a.id=b.id
+    -- where a.PARTNUMBER like rel||'%';
+   select  rel;
+    insert into rs  select  a.id,a.PARTNUMBER,b.price from catentry a join listprice b on a.id=b.id
+    where a.PARTNUMBER like CONCAT(rel,'%');
+    END LOOP;  
+		select *from rs;
+    CLOSE curl;
+  END
+
+-- 正确的写法，将差异的数据写入另外一个表中
+create  PROCEDURE temp()
+BEGIN  
+    DECLARE v_key varchar(30);  
+    DECLARE allAddr varchar(30);  
+		DECLARE v_count int;
+    DECLARE done bool DEFAULT false;  
+    DECLARE curl CURSOR FOR SELECT PARTNUMBER FROM x_temp;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = true;  
+    OPEN curl;  
+    read_loop: LOOP
+      FETCH curl INTO v_key; 
+			select count(*) into v_count from x_partnumber where partnumber like CONCAT('%',v_key,'%');
+			-- select v_count;
+			 if(v_count=0) THEN
+						 insert into result  (result,v_key) VALUES (v_key,v_count);
+			 end if;
+ IF done THEN  
+        LEAVE read_loop; 
+end if;
+
+    END LOOP;
+    CLOSE curl;
+  END
+
+--查看xnotifytasks表
+select * from xnotifytasks where tid='3127042684956364'
+--根据sku查找退货
+select s.orders_id,t.* from orderitems s join (
+select a.rma_id,a.orderitems_id,a.status,a.TOTALCREDIT,c.REFUNDTIME from rmaitem a join catentry b 
+on a.CATENTRY_ID=b.CATENTRY_ID join xrefunds c on a.rma_id=c.rma_id
+where a.LASTUPDATE>='2016-01-01' and a.LASTUPDATE<='2017-02-20 23:59:59' 
+and b.PARTNUMBER='11530727800902') t 
+on s.orderitems_id =t.orderitems_id  
+and s.storeent_id in('10152','10153')
+--导快递单
+select a.orders_id,b.ormorder,a.field2,a.field3,a.field4,a.field5 from  xordextdata a,orders b where a.orders_id=b.orders_id and a.orders_id in
+(
+'10998020'
+)
+---xordextdata里的field8字段为8是不需要重试发送，6是已发送成功的，5的就可以再重试发送快递状态
+select field8 from  xordextdata   where orders_id in
+(
+11980888,
+11983506,
+11983507,
+11983539,
+11983966,
+11983943,
+11980849,
+11984162)
+
+--查找ochirly_sale特卖订单
+select   orders_id,
+case when FFMCENTER_ID='35052' then 'OchirlySale_Z01'
+when FFMCENTER_ID='37553' then 'OchirlySale_R03_DC03' 
+else 'other' end,
+a.PARTNUM,
+a.QUANTITY,
+a.LASTCREATE
+from orderitems a
+where FFMCENTER_ID in(37553,35052)
+and a.LASTCREATE>='2017-04-11'
+and a.LASTCREATE<'2017-04-15'
+and a.STOREENT_ID='30251'
+and a.status='D'
+--查订单号，退货号
+select s.orders_id,t.* from orderitems s join (
+select a.rma_id,a.orderitems_id,b.PARTNUMBER,a.status,a.TOTALCREDIT,c.REFUNDTIME from rmaitem a join catentry b 
+on a.CATENTRY_ID=b.CATENTRY_ID join xrefunds c on a.rma_id=c.rma_id
+) t 
+on s.orderitems_id =t.orderitems_id  
+and s.orders_id in
+(
+11980888,
+11983506,
+11983507,
+11983539,
+11983966,
+11983943,
+11980849,
+11984162
+)
+--DB2取出字段值全部为数字的字段
+SELECT * FROM xtaobaotrades WHERE LENGTH(TRIM(TRANSLATE(FIELD3,' ','-0123456789' )))=0
+and field3 is not null and field3!=''
+--根据外部单号排序，查找相同外部单号的数据（有两个相同的外部单号，并且没有拆分）
+select * from (
+select b.ormorder,b.orders_id,b.timeplaced,b.storeent_id,
+rank() over(partition by b.ormorder order by b.orders_id) as rank1
+--rank() over(partition by b.orders_id order by b.orders_id) as rank2
+from orders b
+where  b.timeplaced>='2015-11-11'
+and b.storeent_id in('11051','10152','10153','11151','14752','15254','16251','17251','17752','18251')
+and b.field1 not in(1,2)
+and b.status<>'X'
+)where rank1>1 and ormorder is not null and ormorder<>''
+---在wms查看快递单号与订单号
+SELECT * FROM TRDY_EXP_NBR WHERE  EXP_NBR='VC06385742462'
+SELECT * FROM TRDY_EXP_NBR WHERE  PKT_CTRL_NBR='12591889'
+
+--查询订单是否已经发到WMS
+select * from administrator.ESB_HISDATA where msgkeyid  IN ()
+ and SERVICEID='OrderCreateChangeCancelEC2WMSService_1_00'  and SRC='EC'  AND TAR='WMS'  
+AND BAKONE='ESBTRANSFERED'
+
+--查每个订单的sku及其对应的价格等
+select t.ORDERITEMS_ID,t.orders_id,t.status,t.partnum,t.TOTALPRODUCT 价格,t.TOTALADJUSTMENT 折扣,
+t.TOTALPRODUCT+t.TOTALADJUSTMENT 合计,o.TIMEPLACED 下单时间
+ from orderitems t,orders o where t.orders_id=o.orders_id and t.orders_id
+ in
+ (
+)
+--查找重复订单
+SELECT *
+  FROM (SELECT b.ormorder,
+               b.orders_id,
+               b.timeplaced,
+               b.storeent_id,
+               rank () OVER (PARTITION BY b.ormorder ORDER BY b.orders_id)
+                  AS rank
+          FROM orders b
+         WHERE b.timeplaced >= current date
+               AND b.field1 NOT IN (1) and b.status<>'X'
+       )
+ WHERE rank > 1
+--
+select order_id EC单号,outer_order_id 外部单号,express_code 寄件码,express_number 快递号 from oms_delivery.delivery_info where order_id in
+(）
+
+
+——————————————————————————
+查出差异数据
+select CONCAT('''',orders_id,''',') from orders_temp a where not EXISTS(select orders_id
+from orders b where a.orders_id=b.orders_id);
+
+_____________________________________________________
+查找退货号及退货状态
+select rma_id,REFUNDAGAINSTORDID,RMADATE,status,
+case 
+when status='PRG' then '申请退货'
+when status='RSO' then '等待退货'
+when status='ERR' then '退货不符'
+when status='RCV' then '已收退货'
+when status='CAN' then '退货取消'
+else 'other' end
+from rma
+where REFUNDAGAINSTORDID in
+()
