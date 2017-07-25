@@ -1,4 +1,8 @@
+'''
+Created on 2017年7月24日
 
+@author: ning.lin
+'''
 #coding:utf-8
 import codecs
 import difflib
@@ -8,8 +12,8 @@ import sys
 
 tempfile='diff.html'
 try:
-    textfile1='D:\Program Files\Python_Workspace\devpos_simple2.7\\a.txt'
-    textfile2='D:\Program Files\Python_Workspace\devpos_simple2.7\\b.txt'
+    textfile1='D:\\Program Files\\Python_Workspace\\devpos_simple\\a.txt'
+    textfile2='D:\\Program Files\\Python_Workspace\\devpos_simple\\b.txt'
 except Exception as e:
     print ("Usage: simple3.py filename1 filename2")
     sys.exit()
@@ -31,7 +35,7 @@ if textfile1=="" or textfile2=="":
     
 #保存两个文件的比较结果
 def save_tempHtml(html):
-    with codecs.open(r'diff.html', 'wb', 'utf-8') as f:
+    with codecs.open('diff.html', 'wb', 'utf-8') as f:
         f.write(html)
 
 #计算字符串出现的次数
@@ -70,7 +74,7 @@ d2 = difflib.Differ()
 diff = d2.compare(text1_lines, text2_lines)
 compare_line='\n'.join(list(diff))
 #print(compare_line)
-print type(html)
+print ('type(html)')
 #保存到html文件中
 save_tempHtml(html)
 #替换文件中的charset=ISO-8859-1为charset=UTF-8

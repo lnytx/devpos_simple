@@ -1,8 +1,14 @@
 # coding: utf-8
 
-import paramiko
+import cmd
 import re
+import select
+import sys
 from time import sleep
+
+from binstar_client.commands import channel
+import paramiko
+
 
 # 定义一个类，表示一台远端linux主机
 class Linux(object):
@@ -24,11 +30,19 @@ class Linux(object):
         while True:
             # 连接过程中可能会抛出异常，比如网络不通、链接超时
             try:
+                #设置ssh连接的远程主机地址和端口
                 self.t = paramiko.Transport(sock=(self.ip, 22))
+                self.t.start_client()
+                #设置登录名和密码
                 self.t.connect(username=self.username, password=self.password)
+                #self.t.connect(username=self.username, password=self.password)
+                #连接成功后打开一个channel
                 self.chan = self.t.open_session()
+                #设置会话超时时间
                 self.chan.settimeout(self.timeout)
+                #打开远程的terminal
                 self.chan.get_pty()
+                #激活terminal
                 self.chan.invoke_shell()
                 # 如果没有抛出异常说明连接成功，直接返回
                 print ('连接%s成功' % self.ip)
@@ -57,6 +71,8 @@ class Linux(object):
         p = re.compile(r':~ #')
         result = ''
         # 发送要执行的命令
+        #然后就可以通过chan.send('command')和chan.recv(recv_buffer)来远程执行命令以及本地获取反馈。
+
         self.chan.send(cmd)
         # 回显很长的命令可能执行较久，通过循环分批次取回回显
         str1=str(self.chan.recv(65535),'utf-8')
@@ -73,7 +89,7 @@ class Linux(object):
 if __name__ == '__main__':
     host = Linux('192.168.153.135', 'root', 'root')
     host.connect()
-    host.send('du -h')
+    host.send('pwd')
     host.close()
 # 链接正常的情况
 # if __name__ == '__main__':

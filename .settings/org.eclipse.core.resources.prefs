@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
-encoding//tools/connect_class.py=utf-8
-encoding//tools/diff_files.py=utf-8
-encoding//tools/\u4E0A\u4F20\u4E0B\u8F7D\u6587\u4EF6.py=utf8
+encoding//tool_paramiko/connect_class.py=utf-8
+encoding//tool_paramiko/diff_files.py=utf-8
+encoding//tool_paramiko/\u4E00\u6B21\u6267\u884C\u591A\u4E2A\u547D\u4EE4.py=utf-8
+encoding//tool_paramiko/\u4E0A\u4F20\u4E0B\u8F7D\u6587\u4EF6.py=utf8
+encoding/loggingclass.py=utf-8
