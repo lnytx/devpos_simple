@@ -1,3 +1,69 @@
+2017-07-28 14:35:45,574 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:35:45,817 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:35:45,833 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:35:45,841 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:35:46,846 root         ERROR    timed out ssh_login.py ssh_connect       70
+2017-07-28 14:35:46,859 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:35:46,957 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:35:46,981 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:35:46,996 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:35:48,000 root         ERROR    timed out ssh_login.py ssh_connect       70
+2017-07-28 14:48:21,042 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:48:21,268 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:48:21,299 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:48:21,299 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:48:21,315 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:48:21,386 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:48:21,404 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:48:21,414 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:48:21,427 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:48:21,476 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:48:21,492 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:48:21,507 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:48:21,523 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:48:21,601 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:48:22,148 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:49:10,946 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:11,200 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:11,529 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:49:11,546 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:11,640 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:11,671 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:11,686 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:49:11,698 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:11,757 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:11,772 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:11,780 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:49:11,792 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:11,851 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:11,866 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:11,878 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:49:54,642 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:54,880 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:54,896 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:54,915 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:54,985 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:54,993 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:55,025 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:55,139 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:49:55,510 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:49:55,588 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:49:55,620 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:50:19,211 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:50:19,473 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:50:19,743 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:50:19,758 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:50:19,844 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:50:19,872 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:50:19,899 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:50:19,914 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:50:19,981 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:50:19,996 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:50:20,007 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
+2017-07-28 14:50:20,020 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 14:50:20,206 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-28 14:50:20,222 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 14:50:20,230 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
 2017-07-28 14:51:23,737 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
 2017-07-28 14:51:23,979 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
 2017-07-28 14:51:23,995 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636

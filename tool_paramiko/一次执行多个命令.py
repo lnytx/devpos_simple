@@ -10,7 +10,7 @@ def python_ssh(hostname,username,password,**shell):
         for key in shell:
             stdin,stdout,stderr = s.exec_command(shell[key])
             print("key",key)
-            result[key] = stdout.read(),stderr.read()
+            result[key] = stdout.read().decode('utf-8'),stderr.read().decode('utf-8')
         s.close()
         return result
     except Exception as e:
@@ -18,4 +18,4 @@ def python_ssh(hostname,username,password,**shell):
         print("异常",str(e))
         return result
 #python_ssh('192.168.153.135', 'root', 'root',a='cd /soft',b='ls -l',c='touch 1.log')
-print(python_ssh('192.168.153.135', 'root', 'root',shell1='cd /soft',shell2='ls -al',shell3='touch 1.log'))
+print(python_ssh('192.168.153.135', 'root', 'root',shell1='cd /soft',shell2='ls -al',shell3='mkdir 1.log'))

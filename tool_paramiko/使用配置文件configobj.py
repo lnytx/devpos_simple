@@ -22,13 +22,57 @@ log=log(logfile)
 
 
 conf_ini = "./text.ini"  
-#读取配置文件
-def read_config(filename,key):
+#读取配置文件中的某一个sections
+def read_sections(filename,sections):
+
     dict_value={}
     try:
         config = ConfigObj(filename,encoding='UTF8')
-        for k,v in config[key].items():
+        for k,v in config[sections].items():
             dict_value[k]=v
+        return dict_value
+    except Exception as e:
+        print("config err",log.error(str(e)))
+#得到配置文件中的所有配置       
+def read_all(filename):
+    '''
+            常见方法
+    ‘items’
+    ‘iteritems’
+    ‘iterkeys’
+    ‘itervalues’
+    ‘keys’
+    ‘popitem’
+    ‘values’
+    '''
+    dict_value={}
+    try:
+        config = ConfigObj(filename,encoding='UTF8')
+        #items = config.popitem()
+        items = config.iteritems()
+        for k,v in items:
+            dict_value[k]=v
+        return dict_value
+    except Exception as e:
+        print("config err",log.error(str(e)))
+
+#找到集群中的所有机器，以配置文件中的名称为准，
+def read_theSames(filename,same):
+    '''
+    same是同一组机器的共性命名，
+    [web1][web2][web4]----same=web
+     read_theSames(filename,web)
+    '''
+    dict_value={}
+    count = len(same)
+    print("same位数",count)
+    try:
+        config = ConfigObj(filename,encoding='UTF8')
+        #items = config.popitem()
+        items = config.iteritems()
+        for k,v in items:
+            if k[0:count]==same:
+                dict_value[k]=v
         return dict_value
     except Exception as e:
         print("config err",log.error(str(e)))
@@ -40,6 +84,7 @@ def add_config(filename,sections='default',ip='127.0.0.1',port=22,user='root',pa
     '''
     try:
         config = ConfigObj(filename,encoding='UTF8')  
+        #config.initial_comment(sections)
         config[sections]={}
         config[sections]['ip'] = ip
         config[sections]['port'] = port
@@ -92,9 +137,15 @@ def validate_config(filename,sections,options):
         print("config err",log.error(str(e)))
     
 if __name__=='__main__':
-    print(read_config(conf_ini,'web3'))
+    #print(read_theSames(conf_ini,'db'))
+    #clear_clinfig(conf_ini)
+    #print(read_all(conf_ini))
     #update_config(conf_ini, 'web2', 'ip', '192.168.0.100')
     #print(validate_config(conf_ini,'web3','sss'))
     #del_config(conf_ini,'web24','ssss')
     #add_config(conf_ini,'web2','192.168.153.135',22,'root','root')
-    #add_config(conf_ini,'web3','192.168.153.135',22,'root','root',true='true',Off='Off',s="ssss")
+    add_config(conf_ini,'web_01','192.168.153.135',22,'root','root',true='true',Off='Off',s="ssss")
+    add_config(conf_ini,'web_02','172.17.0.2',22,'root','root',true='true',Off='Off',s="ssss")
+    add_config(conf_ini,'web_03','172.17.0.3',22,'root','root',true='true',Off='Off',s="ssss")
+    add_config(conf_ini,'db_store03','172.17.0.4',38022,'root','root',true='true',Off='Off',s="ssss")
+    add_config(conf_ini,'db_store02','172.17.0.5',38022,'root','root',true='true',Off='Off',s="ssss")

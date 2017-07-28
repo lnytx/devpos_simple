@@ -1,19 +1,29 @@
-#远程服务器  
+#远程服务器
+from _sqlite3 import connect
+from distutils import command
+import os
+import shutil
+
 import paramiko
 
 from loggingclass import log
 
 
+from tool_paramiko.使用配置文件configobj import read_all
+from tool_paramiko.使用配置文件configobj import read_theSames
+from tool_paramiko.使用配置文件configobj import add_config
+
+
 ip = '192.168.153.135'
-port = 22
+port = '9202'
 username = 'root'  
 password = 'root'  
 
 logfile='D:\\Program Files\\Python_Workspace\\devpos_simple\\logs\\ssh_loggin.log'
 log=log(logfile)
+conf_ini = "./text.ini"  
 
 def ssh_login():
-
     #创建SSH连接日志文件（只保留前一次连接的详细日志，以前的日志会自动被覆盖）  
     paramiko.util.log_to_file('syslog')  
     s = paramiko.SSHClient()  
@@ -26,30 +36,51 @@ def ssh_login():
     #打印标准输出  
     print (stdout.read().decode('utf-8'))
     s.close()
-    
-def ssh_connect(ip,port,command):
+
+#根据提供的参数使用ssh连接到对应机器   
+def ssh_connect(logfile,ip,port,username,password,command):
+    no_con_server=[]
     try:
-        ssh = paramiko.SSHClient()  
-        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())  
-        ssh.connect(ip, port,username, password,timeout=5)
+        ssh = paramiko.SSHClient()
+        paramiko.util.log_to_file('ssh.log')
+        #允许连接不在know_hosts文件中的主机
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        print("ip+端口",ip,port)
+        ssh.connect(ip, int(port),username, password,timeout=1)
         try:
             stdin,stdout,stderr = ssh.exec_command(command)
             channel = stdout.channel
             status = channel.recv_exit_status()
+            print("status",status)
             if status==0:
-                print (stdout.read().decode('utf-8'))
+                print("已经连接到该主机%s:%s，%s命令执行成功" %(ip,port,command))
+                #打印执行的命令
+                #print (stdout.read().decode('utf-8'))
             else:
+                print("执行命令%s报错,请查看日志"% (status,logfile))
                 log.error(str(stderr.read()))
                 print (stderr.read().decode('utf-8'))
+                sessions=ip+":"+port
+                #执行命令异常的IP写入到数据库，这里是写入到一个配置文件中
+                add_config(logfile,sessions,ip,port,username,password)
         except Exception as e:
-            print (stderr.read().decode('utf-8'))
+            print ("执行命令%s时报错，请看日志" % command,logfile,'\n',stderr.read().decode('utf-8'),log(str(e)))
+            sessions=ip+":"+port
+            #执行命令异常的IP写入到数据库，这里是写入到一个配置文件中
+            add_config(logfile,sessions,ip,port,username,password)
     except Exception as e:
-        print ("stderr",log.error(str(e)))
-        #有异常就一直去调用
-        #ssh_connect()
+        print ("连接%s:%s时报错，请查看日志%s" % (ip,port,logfile),str(e),'\n',log.error(str(e)))
+        #记录IP加端口，将其写入未连接成功的配置文件中
+        sessions=ip+":"+port
+        #将连接异常的IP写入到数据库，这里是写入到一个配置文件中
+        add_config(logfile,sessions,ip,port,username,password)
         
     
     #return ssh  
+    
+
+
+    
     
 def chan_connect(ip,port,command):
     #设置ssh连接的远程主机地址和端口
@@ -68,5 +99,36 @@ def chan_connect(ip,port,command):
     chan.send('df -h')
     str1=str(chan.recv(65535),'utf-8')
     print(str1)
+
+def test_ssh_config(conf_ini,sames):
+    no_connect_ini="./no_conn.ini"
+    dict_server={}
+    dict_server=read_theSames(conf_ini,sames)
+    print("dict_server",dict_server)
+    #print("type",type(dict_server),dict_server)
+    #print(dict_server['ssh_01']['ip'])
+    #print(type(read_theSames(conf_ini,'ssh')))
+    #print("dict_server",dict_server)
+    for key in dict_server:
+        #print("value type",value)#class 'configobj.Section'
+        #print("key",dict_server[key])
+        #测试配置文件中的IP是否可能使用ssh连接上
+        ssh_connect(no_connect_ini,dict_server[key]['ip'], dict_server[key]['port'], dict_server[key]['user'], dict_server[key]['passwd'], 'pings www.baidu.com -W 1 -c 1')
+def test_ssh_fail_config():
+    conf_ini='./no_conn.ini'
+    temp_ini='./for_fail_con.ini'
+    shutil.copyfile(conf_ini, temp_ini)
+    dict_server={}
+    dict_server=read_all(conf_ini)
+    print("dict_server",dict_server)
+    if os.path.exists(temp_ini):
+        os.remove(temp_ini)
+    for key in dict_server:
+        #测试配置文件中的IP是否可能使用ssh连接上
+        ssh_connect(temp_ini,dict_server[key]['ip'], dict_server[key]['port'], dict_server[key]['user'], dict_server[key]['passwd'], 'ping www.baidu.com -W 1 -c 1')
 if __name__=='__main__':
-    ssh_connect(ip,port,'ssa')
+    #ssh_connect(ip,port,username,password,'pwd')
+    #test_ssh_config(conf_ini,'ssh')
+    test_ssh_fail_config()
+    
+    
