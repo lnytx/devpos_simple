@@ -109,3 +109,9 @@
 2017-07-28 17:57:39,820 root         ERROR    [WinError 183] 当文件已存在时，无法创建该文件。: '2' 上传下载文件.py download_dir      110
 2017-07-28 17:57:39,839 root         ERROR    [WinError 183] 当文件已存在时，无法创建该文件。: '3' 上传下载文件.py download_dir      110
 2017-07-28 17:57:39,840 root         ERROR    object of type 'SFTPAttributes' has no len() 上传下载文件.py download_dir      120
+2017-07-28 18:06:58,437 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 18:06:58,705 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 18:06:58,971 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-28 18:07:26,881 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-28 18:07:27,119 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-28 18:07:27,369 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131

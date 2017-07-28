@@ -90,31 +90,14 @@ def download_dir(ip, port, username, password, local_dir, remote_dir):
         trans.connect(username=username, password=password)  
         sftp = paramiko.SFTPClient.from_transport(trans)
         try:
-            #files=sftp.listdir(remote_dir)
-            files = sftp.listdir_attr(remote_dir)
-            #files = sftp.listdir(remote_dir)
-            for file in files:
-                #for file_name in files:  
-                    print("files",file)
-                    print("sss",remote_dir+file.filename)
-#                     if os.path.isdir(file):
-#                         print("dir",file)
-                    if S_ISDIR(file.st_mode):
-                        files = sftp.listdir_attr(remote_dir)
-                        print("files",files)
-                        #创建目录
-                        try:
-                            print("dir",file.filename)
-                            os.mkdir(file.filename)
-                        except Exception as e:
-                            print("files err",log.error(str(e)))
+            print(__get_all_files_in_remote_dir(sftp, remote_dir))
                         #print("sss",os.path.join(remote_dir,file))
                     #print("dirs",dirs)
                     #print("root",files)
         except Exception as e:
             print("files err",log.error(str(e)))
-        for f in files:
-            print ('Downloading file:',os.path.join(remote_dir,f))
+#             for f in files:
+#                 print ('Downloading file:',os.path.join(remote_dir,f))
             #sftp.get(os.path.join(remote_dir,f),os.path.join(local_dir,f))    
     except Exception as e:
         print (log.error(str(e)))
@@ -140,7 +123,7 @@ def catch_dir_file(path):
                 #outfile.write(guid)
                 f.close()
 # ------获取远端linux主机上指定目录及其子目录下的所有文件------
-def __get_all_files_in_remote_dir(self, sftp, remote_dir):
+def __get_all_files_in_remote_dir(sftp, remote_dir):
     # 保存所有文件的列表
     all_files = list()
     # 去掉路径字符串最后的字符'/'，如果有的话
@@ -152,10 +135,11 @@ def __get_all_files_in_remote_dir(self, sftp, remote_dir):
         # remote_dir目录中每一个文件或目录的完整路径
         filename = remote_dir + '/' + file.filename
         # 如果是目录，则递归处理该目录，这里用到了stat库中的S_ISDIR方法，与linux中的宏的名字完全一致
-        if S_ISDIR(x.st_mode):
-            all_files.extend(self.__get_all_files_in_remote_dir(sftp, filename))
+        if S_ISDIR(file.st_mode):
+            all_files.extend(__get_all_files_in_remote_dir(sftp, filename))
         else:
             all_files.append(filename)
+    return all_files
 #在当前目录下创建子目录
 def mkdir_path(dir):
     #判断是否是个目录
