@@ -50,6 +50,21 @@ def return_ssh_connect(ip,port,username,password,logfile=logfile):
         #将连接异常的IP写入到数据库，这里是写入到一个配置文件中
     return ssh
 
+def exec_ssh_command(ssh,command):
+    try:
+        stdin,stdout,stderr = ssh.exec_command(command)
+        channel = stdout.channel
+        status = channel.recv_exit_status()
+        print("status",status)
+        if status==0:
+            print("已经连接到该主机%s:%s,mkdir -p命令执行成功" %(ip,port))
+        else:
+            print("执行命令%s报错,请查看日志"% (status))
+            log.error(str(stderr.read()))
+            print (stderr.read().decode('utf-8'))
+    except Exception as e:
+        print (stderr.read().decode('utf-8'),log.error(str(e)))
+
 #根据提供的参数使用ssh连接到对应机器   
 def ssh_connect_command(logfile,ip,port,username,password,command):
     no_con_server=[]

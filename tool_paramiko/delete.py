@@ -4,6 +4,8 @@ Created on 2017年7月24日
 @author: ning.lin
 '''
 # -*- coding: utf-8 -*-
+import time
+
 from configobj import ConfigObj
 
 from loggingclass import log
@@ -21,11 +23,13 @@ log=log(logfile)
 conf_ini = 'test.ini'
 c1 = ConfigObj(conf_ini)
 print("conf_ini",c1)
+
+print(time.strftime('%Y-%m-%d_%H:%M:%S',time.localtime(time.time())))
 #  
 # 读配置文件  
 #  
-print (c1['server'])
-print (c1['server']['servername'])
+# print (c1['server'])
+# print (c1['server']['servername'])
 
 
 

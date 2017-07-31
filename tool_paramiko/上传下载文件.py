@@ -13,7 +13,7 @@ import paramiko
 
 from loggingclass import log
 from tool_paramiko.ssh_login import return_paramiko_connect, \
-    return_ssh_connect
+    return_ssh_connect, exec_ssh_command
 
 
 log_file=os.path.join('../logs/file_err.log')
@@ -258,22 +258,8 @@ def upload_manay_dir(ip, port, username, password, local_dir, remote_dir):
         path = os.path.join(remote_dir,path)
         print("remote_dir",remote_dir)
         print("path3",path)
-        
         # 创建目录 sftp的mkdir也可以，但是不能创建多级目录所以改用ssh创建。
-        try:
-            stdin,stdout,stderr = ssh.exec_command('mkdir -p ' + path)
-            channel = stdout.channel
-            status = channel.recv_exit_status()
-            print("status",status)
-            if status==0:
-                print("已经连接到该主机%s:%s,mkdir -p命令执行成功" %(ip,port))
-            else:
-                print("执行命令%s报错,请查看日志"% (status))
-                log.error(str(stderr.read()))
-                print (stderr.read().decode('utf-8'))
-        except Exception as e:
-            print (stderr.read().decode('utf-8'),log(str(e)))
-            
+        exec_ssh_command(ssh,'mkdir -p ' + path)
         remote_filename = path + '/' + filename
         print ('Put files...' + filename)
         print ('remote_filename...' + remote_filename)
@@ -296,12 +282,12 @@ if __name__ == '__main__':
     local_dir='D:/Program Files/Python_Workspace/devpos_simple/download_files/'
     dest_file=os.path.join(local_dir,'a.txt')
     #文件传入/soft/ELK/dir/目录中
-    remote_dir='/aaa/sss'
+    remote_dir='/aaa/sss/'
     remote_file='/soft/ELK/dir/OMS数据库sql.txt'
     #download_file(ip,port,username,password,dest_file,remote_file)
     #download_file(ip, port, username, password, dest_file, remote_file)
     #upload_single_dir(ip,port,username,password,local_dir,remote_dir)
-    download_dir(ip, port, username, password, local_dir, remote_dir)
-    #upload_manay_dir(ip, port, username, password, local_dir, remote_dir)
+    #download_dir(ip, port, username, password, local_dir, remote_dir)
+    upload_manay_dir(ip, port, username, password, local_dir, remote_dir)
     #get_all_files_in_local_dir(local_dir)
     #print(up_local_dir[62:])
