@@ -83,7 +83,7 @@ def add_config(filename,sections='default',ip='127.0.0.1',port=22,user='root',pa
                     生成配置文件, 字典的形式添加数据
     '''
     try:
-        config = ConfigObj(filename,encoding='UTF8')  
+        config = ConfigObj(filename,encoding='utf-8')  
         #config.initial_comment(sections)
         config[sections]={}
         config[sections]['ip'] = ip

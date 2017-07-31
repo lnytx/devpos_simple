@@ -1,179 +1,292 @@
-2017-07-28 14:35:45,574 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:35:45,817 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:35:45,833 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:35:45,841 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:35:46,846 root         ERROR    timed out ssh_login.py ssh_connect       70
-2017-07-28 14:35:46,859 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:35:46,957 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:35:46,981 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:35:46,996 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:35:48,000 root         ERROR    timed out ssh_login.py ssh_connect       70
-2017-07-28 14:48:21,042 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:48:21,268 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:48:21,299 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:48:21,299 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:48:21,315 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:48:21,386 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:48:21,404 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:48:21,414 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:48:21,427 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:48:21,476 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:48:21,492 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:48:21,507 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:48:21,523 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:48:21,601 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:48:22,148 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:49:10,946 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:11,200 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:11,529 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:49:11,546 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:11,640 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:11,671 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:11,686 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:49:11,698 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:11,757 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:11,772 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:11,780 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:49:11,792 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:11,851 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:11,866 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:11,878 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:49:54,642 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:54,880 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:54,896 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:54,915 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:54,985 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:54,993 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:55,025 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:55,139 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:49:55,510 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:49:55,588 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:49:55,620 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:50:19,211 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:50:19,473 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:50:19,743 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:50:19,758 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:50:19,844 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:50:19,872 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:50:19,899 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:50:19,914 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:50:19,981 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:50:19,996 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:50:20,007 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:50:20,020 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:50:20,206 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:50:20,222 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:50:20,230 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:51:23,737 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:51:23,979 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:51:23,995 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:51:24,003 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:52:15,898 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:52:16,122 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:52:16,138 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:52:16,156 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 14:53:10,259 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:53:10,496 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:53:10,516 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 14:53:27,989 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 14:53:28,226 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 14:53:28,242 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:05:56,545 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:05:56,782 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:05:56,798 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:05:56,813 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 15:05:56,829 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:05:56,886 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:05:56,902 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:05:56,914 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 15:05:56,933 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:05:57,010 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:05:57,308 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 15:05:58,309 root         ERROR    timed out ssh_login.py ssh_connect       70
-2017-07-28 15:05:58,344 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:05:58,403 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:05:58,419 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:05:58,429 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       70
-2017-07-28 15:05:59,432 root         ERROR    timed out ssh_login.py ssh_connect       70
-2017-07-28 15:10:47,915 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:10:48,151 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:10:48,178 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:10:48,191 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:10:48,192 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:10:48,270 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:10:48,286 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:10:48,301 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:10:48,317 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:10:48,407 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:10:48,776 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:10:48,807 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:10:48,889 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:10:48,922 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:10:48,935 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:11:09,053 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:11:09,280 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:11:09,296 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:11:09,307 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:11:09,323 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:11:09,406 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:11:09,680 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:11:10,686 root         ERROR    timed out ssh_login.py ssh_connect       71
-2017-07-28 15:11:11,688 root         ERROR    timed out ssh_login.py ssh_connect       71
-2017-07-28 15:11:11,704 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:11:11,763 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:11:11,782 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:11:11,792 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:11:11,808 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:11:11,868 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:11:11,888 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:11:11,898 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:14:48,923 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:14:49,170 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:14:49,447 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:14:49,463 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:14:49,557 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:14:49,588 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:14:49,604 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:14:49,635 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:14:49,697 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:14:49,713 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:14:49,729 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:14:49,729 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:14:49,792 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:14:49,807 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:14:49,822 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       71
-2017-07-28 15:15:41,852 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:15:42,088 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:15:42,104 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:15:42,147 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:15:42,221 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:15:42,537 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:15:42,621 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:15:42,645 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:15:42,700 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:15:42,754 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:15:42,770 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:20:32,494 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:20:32,721 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:20:32,736 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:20:33,757 root         ERROR    timed out ssh_login.py ssh_connect       71
-2017-07-28 15:20:34,761 root         ERROR    timed out ssh_login.py ssh_connect       71
-2017-07-28 15:20:34,771 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:20:34,829 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:20:34,849 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:26:39,724 root         ERROR    timed out ssh_login.py ssh_connect       72
-2017-07-28 15:26:40,738 root         ERROR    timed out ssh_login.py ssh_connect       72
-2017-07-28 15:26:40,753 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:26:40,985 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:26:40,998 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 15:26:41,029 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 15:26:41,092 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 15:26:41,108 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 16:02:56,011 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 16:02:56,224 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 16:02:56,255 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 16:02:57,274 root         ERROR    timed out ssh_login.py ssh_connect       72
-2017-07-28 16:02:57,314 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
-2017-07-28 16:02:57,372 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
-2017-07-28 16:02:57,387 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
-2017-07-28 16:02:58,412 root         ERROR    timed out ssh_login.py ssh_connect       72
+2017-07-31 14:36:36,903 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:36:37,175 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:36:37,416 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:36:37,436 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:36:37,561 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:48:01,519 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:48:01,788 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:48:02,066 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:48:02,066 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:48:33,569 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:48:33,824 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:48:34,094 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:48:34,094 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:49:03,174 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:49:03,438 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:49:03,766 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:49:03,770 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:49:18,650 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:49:18,922 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:49:19,215 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:49:19,215 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:49:29,122 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:49:29,445 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:49:29,702 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:49:29,705 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:51:15,092 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:51:15,319 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:51:15,718 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:51:15,725 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:51:57,986 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:51:58,242 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:51:58,555 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:51:58,555 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:52:11,703 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:52:11,954 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:52:12,302 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:52:12,306 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:52:24,342 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:52:24,587 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:52:24,842 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:52:24,846 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:52:39,605 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:52:39,854 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:52:40,223 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:52:40,223 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:53:36,342 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:53:36,567 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:53:36,822 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:53:36,822 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:53:59,865 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:54:00,157 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:54:00,407 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:54:00,407 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:54:27,578 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:54:27,846 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:54:28,106 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:54:28,121 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:54:46,401 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:54:46,650 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:54:46,929 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:54:46,933 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:56:27,373 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:56:27,640 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:56:27,907 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:56:27,907 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:57:10,585 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:57:10,835 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:57:11,102 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:57:27,525 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:57:27,784 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:57:28,088 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:57:46,580 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:57:46,829 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:57:47,089 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:57:53,291 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:57:53,539 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:57:53,854 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:57:53,858 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:58:54,234 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:58:54,493 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:58:54,754 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:58:54,758 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 14:59:34,670 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 14:59:34,918 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 14:59:35,166 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 14:59:35,183 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:03:10,067 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:03:10,318 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:03:10,580 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:03:10,583 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:04:43,245 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:04:43,515 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:04:43,780 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:04:43,791 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:05:39,300 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:05:39,561 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:05:39,846 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:05:39,851 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:05:50,793 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:05:51,049 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:05:51,310 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:05:51,314 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:06:42,201 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:06:42,449 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:06:42,700 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:06:42,713 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:06:49,363 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:06:49,616 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:06:50,013 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:06:50,020 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:09:36,649 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:09:36,901 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:09:37,158 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:09:37,165 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:11:03,245 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:11:03,535 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:11:03,815 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:11:03,819 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:14:37,356 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:14:37,669 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:14:38,010 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:14:38,010 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:15:17,193 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:15:17,451 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:15:17,761 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:15:17,765 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:15:31,755 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:15:32,014 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:15:32,250 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:15:32,266 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:15:40,441 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:15:40,677 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:15:40,946 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:15:40,949 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:17:05,640 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:17:05,897 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:17:06,174 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:17:06,178 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:20:11,793 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:20:12,096 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:20:12,420 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:20:12,445 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:20:12,614 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:20:12,947 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:20:12,950 root         ERROR    Parsing failed with several errors.
+First error at line 1. 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:46,034 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:46,320 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:46,682 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:21:46,701 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:46,836 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:47,144 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:47,152 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:47,167 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:47,322 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:47,634 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:47,634 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:47,654 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:47,746 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:48,084 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:48,086 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:48,105 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:48,202 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:48,635 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:48,637 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:48,656 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:48,753 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:49,048 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:49,050 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:49,073 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:21:49,173 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:21:49,501 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:21:49,503 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:21:49,504 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:29:37,056 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:37,320 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:37,570 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:29:37,602 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:37,749 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:38,088 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:38,099 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:38,099 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:38,239 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:38,602 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:38,603 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:38,603 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:38,744 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:39,121 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:39,135 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:39,151 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:39,310 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:39,744 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:39,744 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:39,762 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:39,884 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:40,179 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:40,181 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:40,202 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:29:40,301 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:29:40,621 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:29:40,621 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:29:40,624 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:31:11,723 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:11,978 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:12,256 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:31:12,283 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:12,381 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:12,721 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:12,725 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:12,748 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:12,843 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:13,162 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:13,164 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:13,176 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:13,270 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:13,606 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:13,607 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:13,617 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:13,754 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:14,087 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:14,087 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:14,103 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:14,228 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:14,556 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:14,556 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:14,587 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:31:14,746 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:31:15,088 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:31:15,090 root         ERROR    'utf-8' codec can't decode byte 0xd3 in position 25: invalid continuation byte 使用配置文件configobj.py add_config       99
+2017-07-31 15:31:15,090 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:33:41,220 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:33:41,506 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 15:33:41,537 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:33:42,648 root         ERROR    timed out ssh_login.py ssh_connect       72
+2017-07-31 15:33:43,653 root         ERROR    timed out ssh_login.py ssh_connect       72
+2017-07-31 15:33:43,667 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:33:43,726 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 15:33:43,742 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:26,242 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:26,504 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:26,774 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 15:35:26,789 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:26,930 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:27,255 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:27,271 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:27,412 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:27,740 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:27,759 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:27,867 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:28,237 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:28,239 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:28,370 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:28,685 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:28,705 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:28,848 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:29,168 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:29,186 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:35:29,357 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:35:29,628 root         ERROR    'RootLogger' object is not callable ssh_login.py ssh_connect       72
+2017-07-31 15:35:29,629 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 15:37:04,164 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:37:04,399 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 15:37:04,415 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 15:37:05,438 root         ERROR    timed out ssh_login.py ssh_connect       72
+2017-07-31 15:37:06,441 root         ERROR    timed out ssh_login.py ssh_connect       72
+2017-07-31 15:37:06,450 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 15:37:06,517 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 15:37:06,552 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:03:51,600 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:03:51,864 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:03:52,144 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 16:03:52,166 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:03:52,291 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:03:52,988 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 16:06:29,403 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:06:29,663 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:06:29,938 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 16:06:29,953 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:06:30,054 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:06:30,682 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 16:08:26,715 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:08:26,974 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:08:27,272 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 16:08:27,295 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:08:27,396 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:08:28,086 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
+2017-07-31 16:08:57,690 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:08:57,937 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:08:58,266 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 16:08:58,281 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 16:08:58,374 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 16:08:59,057 paramiko.transport.sftp INFO     [chan 0] sftp session closed.  sftp.py     _log      131
