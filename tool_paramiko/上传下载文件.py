@@ -16,7 +16,7 @@ from tool_paramiko.ssh_login import return_paramiko_connect, \
     return_ssh_connect
 
 
-log_file=os.path.join('./file_err.log')
+log_file=os.path.join('../logs/file_err.log')
 log=log(log_file)
 
 
@@ -46,7 +46,7 @@ def exec_command(ip, port, username, password, cmd):
     """远程执行命令 
     """  
   
-    paramiko.util.log_to_file("paramiko.log")  
+    paramiko.util.log_to_file("../logs/paramiko.log")  
   
     ssh = paramiko.SSHClient()  
     ssh.load_system_host_keys()  
@@ -62,7 +62,7 @@ def upload_file(ip, port, username, password, local_file_path, remote_file_path)
     """上传文件 
     """  
   
-    paramiko.util.log_to_file("paramiko.log")  
+    paramiko.util.log_to_file("../logs/paramiko.log")  
     trans = paramiko.Transport((ip, int(port)))  
     trans.connect(username=username, password=password)  
     sftp = paramiko.SFTPClient.from_transport(trans)  
@@ -85,7 +85,7 @@ def download_file(ip, port, username, password, local_file_path, remote_file_pat
         trans.close()  
 #下载一个目录中的所有文件        
 def download_dir(ip, port, username, password, local_dir, remote_dir):  
-    """下载远程服务器的目录中所有文件 
+    """下载远程服务器的目录中所有文件 ，目录到本地的local_dir目录之下，该local_dir下面包括远程服务器remote_dir的所有目录
     """  
     print("log_file",log_file)
     print("开始下载")
@@ -192,7 +192,7 @@ def upload_single_dir(ip, port, username, password, local_dir, remote_dir):
     """上传目录(从windows上传) 
         上传到remote_dir目录中(sftp无法一次创建多级目录，只能使用ssh command创建)
     """  
-    paramiko.util.log_to_file("paramiko.log")  
+    paramiko.util.log_to_file("../logs/paramiko.log")  
     trans = paramiko.Transport((ip, int(port)))  
     trans.connect(username=username, password=password)  
     sftp = paramiko.SFTPClient.from_transport(trans)  
@@ -213,7 +213,7 @@ def upload_single_dir(ip, port, username, password, local_dir, remote_dir):
             #print("remote_file_path1",remote_file_path)
             #remote_file_path = remote_file_path.replace("\\", "\\")
             #remote_file_path = remote_file_path.replace(" ", "_")
-            remote_file_path =remote_file_path = os.path.join(remote_dir,remote_file_path.split("/")[-1])
+            remote_file_path = os.path.join(remote_dir,remote_file_path.split("/")[-1])
             #print("remote_file_path2",remote_file_path)
             try:  
                 sftp.put(local_file_path, remote_file_path)  
@@ -234,6 +234,8 @@ def upload_single_dir(ip, port, username, password, local_dir, remote_dir):
 #上传多个目录，包括子目录
 def upload_manay_dir(ip, port, username, password, local_dir, remote_dir):  
     """上传多个目录目录(从windows上传) 
+    将本地的local_dir目录下所有的文件，目录都上传到远程服务器的remote_dir目录下面
+    所以一般先将更新目录，文件放入到将本地的local_dir目录中
         上传到remote_dir目录中(使用ssh command创建多个目录)
     """  
     sftp=return_paramiko_connect(ip, port, username, password)
@@ -249,9 +251,13 @@ def upload_manay_dir(ip, port, username, password, local_dir, remote_dir):
         remote_file = os.path.split(x)[0].replace(local_dir, remote_dir)
         path = remote_file.replace('\\', '/')
         print(path.index(remote_dir))
-        print("path",path[(path.index('soft'))+len(remote_dir)-2:])
-        path = path[(path.index('soft'))+len(remote_dir)-2:]
-        print("path",path)
+        print("path1",path[(path.index(remote_dir))+len(remote_dir)-3:])
+        #要在远程机器上创建的所有目录
+        path = path[(path.index(remote_dir))+len(remote_dir):]
+        print("path2",path)
+        path = os.path.join(remote_dir,path)
+        print("remote_dir",remote_dir)
+        print("path3",path)
         
         # 创建目录 sftp的mkdir也可以，但是不能创建多级目录所以改用ssh创建。
         try:
@@ -275,9 +281,11 @@ def upload_manay_dir(ip, port, username, password, local_dir, remote_dir):
         #上传文件
         try:
             sftp.put(x, remote_filename)
+            print("上传成功")
         except Exception as e:
             print (log(str(e)))
     sftp.close()
+    ssh.close()
 
 if __name__ == '__main__':
     ip='192.168.153.135'
@@ -286,16 +294,14 @@ if __name__ == '__main__':
     password='root'
     temp_ini='./for_fail_con.ini'
     local_dir='D:/Program Files/Python_Workspace/devpos_simple/download_files/'
-    up_local_dir='D:/Program Files/Python_Workspace/devpos_simple/download_files/soft/ELK/dir/'
     dest_file=os.path.join(local_dir,'a.txt')
     #文件传入/soft/ELK/dir/目录中
-    remote_dir='/soft'
+    remote_dir='/aaa/sss'
     remote_file='/soft/ELK/dir/OMS数据库sql.txt'
     #download_file(ip,port,username,password,dest_file,remote_file)
     #download_file(ip, port, username, password, dest_file, remote_file)
     #upload_single_dir(ip,port,username,password,local_dir,remote_dir)
-    #download_dir(ip, port, username, password, local_dir, remote_dir)
-    upload_manay_dir(ip, port, username, password, local_dir, remote_dir)
+    download_dir(ip, port, username, password, local_dir, remote_dir)
+    #upload_manay_dir(ip, port, username, password, local_dir, remote_dir)
     #get_all_files_in_local_dir(local_dir)
-    print(up_local_dir.index('soft'))
     #print(up_local_dir[62:])

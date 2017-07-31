@@ -26,7 +26,7 @@ conf_ini = "./text.ini"
 def return_paramiko_connect(ip,port,username,password,logfile=logfile):
     #创建paramiko连接，用于传输文件
     try:
-        paramiko.util.log_to_file("paramiko.log")  
+        paramiko.util.log_to_file("../logs/paramiko.log")  
         trans = paramiko.Transport((ip, int(port)))  
         trans.connect(username=username, password=password)  
         sftp = paramiko.SFTPClient.from_transport(trans)  
@@ -39,7 +39,7 @@ def return_ssh_connect(ip,port,username,password,logfile=logfile):
     #创建SSH连接用于执行命令
     try:
         ssh = paramiko.SSHClient()
-        paramiko.util.log_to_file('ssh.log')
+        paramiko.util.log_to_file('../logs/ssh.log')
         #允许连接不在know_hosts文件中的主机
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         print("ip+端口",ip,port)
@@ -55,7 +55,7 @@ def ssh_connect_command(logfile,ip,port,username,password,command):
     no_con_server=[]
     try:
         ssh = paramiko.SSHClient()
-        paramiko.util.log_to_file('ssh.log')
+        paramiko.util.log_to_file('../logs/ssh.log')
         #允许连接不在know_hosts文件中的主机
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         print("ip+端口",ip,port)
@@ -114,7 +114,7 @@ def chan_connect(ip,port,command):
     print(str1)
 
 def test_ssh_config(conf_ini,sames):
-    no_connect_ini="./no_conn.ini"
+    no_connect_ini="../configs/no_conn.ini"
     dict_server={}
     dict_server=read_theSames(conf_ini,sames)
     print("dict_server",dict_server)
@@ -128,8 +128,8 @@ def test_ssh_config(conf_ini,sames):
         #测试配置文件中的IP是否可能使用ssh连接上
         ssh_connect_command(no_connect_ini,dict_server[key]['ip'], dict_server[key]['port'], dict_server[key]['user'], dict_server[key]['passwd'], 'pings www.baidu.com -W 1 -c 1')
 def test_ssh_fail_config():
-    conf_ini='./no_conn.ini'
-    temp_ini='./for_fail_con.ini'
+    conf_ini='../configs/no_conn.ini'
+    temp_ini='../configs/for_fail_con.ini'
     shutil.copyfile(conf_ini, temp_ini)
     dict_server={}
     dict_server=read_all(conf_ini)

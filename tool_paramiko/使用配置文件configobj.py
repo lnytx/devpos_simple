@@ -21,7 +21,7 @@ logfile='D:\\Program Files\\Python_Workspace\\devpos_simple\\logs\\config.log'
 log=log(logfile)
 
 
-conf_ini = "./text.ini"  
+conf_ini = "../configs/text.ini"  
 #读取配置文件中的某一个sections
 def read_sections(filename,sections):
 

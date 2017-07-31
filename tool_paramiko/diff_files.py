@@ -10,13 +10,7 @@ import sys
 
 
 
-tempfile='diff.html'
-try:
-    textfile1='D:\\Program Files\\Python_Workspace\\devpos_simple\\a.txt'
-    textfile2='D:\\Program Files\\Python_Workspace\\devpos_simple\\b.txt'
-except Exception as e:
-    print ("Usage: simple3.py filename1 filename2")
-    sys.exit()
+
 
 def readfile(filename):
     try:
@@ -28,9 +22,7 @@ def readfile(filename):
        print('Read file Error:'+str(error))
        sys.exit()
 
-if textfile1=="" or textfile2=="":
-    print ("有文件不存在")
-    sys.exit()
+
     
     
 #保存两个文件的比较结果
@@ -62,22 +54,29 @@ def replace_tempHtml(oldstr,newstr):
                 #line = line.replace('''content=\"text/html; charset=ISO-8859-1"''','''content="text/html; charset=UTF-8"''')
             f_w.write(line)
 
-
-text1_lines = readfile(textfile1) 
-text2_lines = readfile(textfile2) 
-#输出html格式
-d = difflib.HtmlDiff()
-html=d.make_file(text1_lines, text2_lines)
-
-#直接输出结果
-d2 = difflib.Differ()
-diff = d2.compare(text1_lines, text2_lines)
-compare_line='\n'.join(list(diff))
-#print(compare_line)
-print ('type(html)')
-#保存到html文件中
-save_tempHtml(html)
-#替换文件中的charset=ISO-8859-1为charset=UTF-8
-
-replace_tempHtml(''' content=\"text/html; charset=ISO-8859-1"''','''content="text/html; charset=UTF-8"''')
-conut_str('''td''')
+def compare_two_files(textfile1,textfile2):
+    text1_lines = readfile(textfile1) 
+    text2_lines = readfile(textfile2)
+    if textfile1=="" or textfile2=="":
+        print ("有文件不存在")
+    #输出html格式
+    d = difflib.HtmlDiff()
+    html=d.make_file(text1_lines, text2_lines)
+    
+    #直接输出结果
+    d2 = difflib.Differ()
+    diff = d2.compare(text1_lines, text2_lines)
+    compare_line='\n'.join(list(diff))
+    #print(compare_line)
+    print ('type(html)')
+    #保存到html文件中
+    save_tempHtml(html)
+    #替换文件中的charset=ISO-8859-1为charset=UTF-8
+    
+    replace_tempHtml(''' content=\"text/html; charset=ISO-8859-1"''','''content="text/html; charset=UTF-8"''')
+    conut_str('''td''')
+if __name__=='__main__':
+    tempfile='diff.html'
+    textfile1='D:\\Program Files\\Python_Workspace\\devpos_simple\\a.txt'
+    textfile2='D:\\Program Files\\Python_Workspace\\devpos_simple\\b.txt'
+    compare_two_files(textfile1,textfile2)
