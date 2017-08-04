@@ -30,8 +30,11 @@ print(time.strftime('%Y-%m-%d_%H:%M:%S',time.localtime(time.time())))
 #  
 # print (c1['server'])
 # print (c1['server']['servername'])
+L=[1,2,3,4]
+print("L[10:]",L[10:])
 
-
+v='a:b:c'
+print(v.split(':')[1])
 
 
     
