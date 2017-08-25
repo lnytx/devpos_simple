@@ -48,5 +48,5 @@ class downloader:
         print ('download %s load success'%(self.name))
         self.fd.close()
 if __name__=='__main__':
-    down = downloader('http://img.mp.itc.cn/upload/20170716/258d3ce4428f4a65b45fd6558c399c55.jpg',6)
+    down = downloader('http://images.cnitblog.com/blog/407700/201505/041320268929440.png',6)
     down.run()

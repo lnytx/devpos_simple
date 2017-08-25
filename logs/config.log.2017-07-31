@@ -1,0 +1,204 @@
+2017-07-31 17:47:59,812 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:48:00,076 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:48:00,076 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:48:00,092 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:48:00,155 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:48:00,170 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:48:00,186 root         ERROR    b'tar: remote_dir: Cannot stat: No such file or directory\ntar: Exiting with failure status due to previous errors\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:51:07,954 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:08,213 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:51:08,228 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:51:08,233 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:08,296 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:51:08,311 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:51:08,327 root         ERROR    b'tar: remote_dir: Cannot stat: No such file or directory\ntar: Exiting with failure status due to previous errors\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:51:25,288 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:25,558 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:51:25,574 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:51:25,587 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:25,645 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:51:25,665 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:51:25,685 root         ERROR    b'tar: remote_dir: Cannot stat: No such file or directory\ntar: Exiting with failure status due to previous errors\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:51:54,915 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:55,173 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:51:55,173 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:51:55,189 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:51:55,252 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:51:55,267 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:52:08,301 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:52:08,563 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:52:08,578 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:52:08,587 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:52:08,649 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:52:08,665 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:52:08,680 root         ERROR    b'tar: remote_dir: Cannot stat: No such file or directory\ntar: Exiting with failure status due to previous errors\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:52:59,709 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:52:59,969 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:52:59,984 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:52:59,989 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:53:00,068 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:53:00,083 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:53:00,099 root         ERROR    b"tar: Cowardly refusing to create an empty archive\nTry `tar --help' or `tar --usage' for more information.\n" ssh_login.py exec_ssh_command       63
+2017-07-31 17:53:10,381 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:53:10,648 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:53:10,663 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:53:10,668 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:53:10,731 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:53:10,746 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:53:10,762 root         ERROR    b"tar: Removing leading `/' from member names\ntar: /soft/ELK/dir: Cannot stat: No such file or directory\ntar: Exiting with failure status due to previous errors\n" ssh_login.py exec_ssh_command       63
+2017-07-31 17:56:23,702 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:56:23,960 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:56:23,971 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:56:23,981 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:56:24,038 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:56:24,052 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:56:24,063 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:56:43,724 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:56:43,982 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:56:43,993 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:56:44,004 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:56:44,060 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:56:44,076 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:56:44,086 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' ssh_login.py exec_ssh_command       63
+2017-07-31 17:57:37,662 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:57:37,910 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:57:37,922 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 17:57:37,932 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 17:57:37,987 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 17:57:38,007 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 17:57:38,017 root         ERROR    b'bash: line 0: cd: /soft/ELK/dir: No such file or directory\n' ssh_login.py exec_ssh_command       63
+2017-07-31 18:00:43,346 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:00:43,594 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:00:43,605 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:00:43,611 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:00:43,670 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 18:00:43,685 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:00:43,694 root         ERROR    b'bash: line 0: cd: /soft/ELK/dir: No such file or directory\n' ssh_login.py exec_ssh_command       63
+2017-07-31 18:15:21,860 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:15:22,115 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:15:22,131 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:15:22,147 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:15:22,210 paramiko.transport INFO     Authentication (publickey) failed. transport.py     _log     1636
+2017-07-31 18:15:22,225 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:34,025 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:34,266 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:34,516 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:16:34,548 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:34,689 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:34,736 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:34,913 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:53,969 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:54,225 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:54,475 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:16:54,499 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:54,624 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:16:54,687 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:16:54,850 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:25:20,117 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:25:20,377 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:25:20,641 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:25:20,645 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:25:20,749 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:25:20,808 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:25:21,116 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:27:24,595 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:27:24,854 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:27:25,130 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:27:25,157 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:27:25,248 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:28:08,325 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:28:08,577 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:28:08,826 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:28:08,842 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:28:08,950 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:28:08,994 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:28:09,118 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:28:10,037 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:34:31,491 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:34:31,764 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:34:32,216 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:34:32,245 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:34:32,377 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:34:32,450 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:34:32,659 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:34:33,148 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:35:53,146 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:35:53,379 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:35:53,641 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:35:53,657 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:35:53,762 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:35:53,813 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:35:53,923 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:35:54,259 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:37:11,709 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:37:11,962 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:37:12,244 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:37:12,260 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:37:12,366 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:37:12,414 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:37:12,551 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:37:13,091 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:38:08,641 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:08,943 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:09,222 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:38:09,243 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:09,352 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:09,400 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:09,516 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:09,906 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:38:39,329 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:39,583 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:39,856 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:38:39,876 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:39,970 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:40,009 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:40,142 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:40,466 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:39:20,677 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:20,925 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:21,197 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:39:21,217 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:21,317 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:21,360 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:21,485 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:21,804 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:39:46,150 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:46,409 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:46,718 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:39:46,739 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:46,983 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:47,005 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:47,142 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:47,613 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:40:28,478 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:28,739 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:29,049 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:40:29,074 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:29,172 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:29,208 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:29,348 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:29,719 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:40:51,308 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:51,584 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:51,843 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:40:51,857 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:51,947 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:51,983 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:52,129 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:52,479 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:41:31,849 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:41:32,095 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:41:32,339 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:41:32,347 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:41:32,475 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:41:32,535 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:41:32,723 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:41:33,381 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:42:23,918 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:42:24,157 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:42:24,582 paramiko.transport.sftp INFO     [chan 0] Opened sftp connection (server version 3)  sftp.py     _log      131
+2017-07-31 18:42:24,603 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:42:24,709 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:42:24,772 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:42:24,922 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:42:25,351 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25

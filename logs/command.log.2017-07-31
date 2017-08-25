@@ -1,0 +1,36 @@
+2017-07-31 18:28:08,994 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:28:09,118 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:28:10,037 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:34:32,450 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:34:32,659 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:34:33,148 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:35:53,813 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:35:53,923 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:35:54,259 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:37:12,414 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:37:12,551 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:37:13,091 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:38:09,400 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:09,516 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:09,906 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:38:40,009 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:38:40,142 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:38:40,466 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:39:21,360 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:21,485 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:21,804 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:39:47,005 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:39:47,142 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:39:47,613 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:40:29,208 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:29,348 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:29,719 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:40:51,983 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:40:52,129 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:40:52,479 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:41:32,535 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:41:32,723 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:41:33,381 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25
+2017-07-31 18:42:24,772 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_6.6.1) transport.py     _log     1636
+2017-07-31 18:42:24,922 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1636
+2017-07-31 18:42:25,351 root         ERROR    b'bash: cd/soft/ELK/dir: No such file or directory\n' 一次执行多个命令.py python_ssh       25

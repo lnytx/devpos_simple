@@ -15,7 +15,7 @@ from tool_paramiko.使用配置文件configobj import add_config
 
 
 ip = '192.168.153.135'
-port = '9202'
+port = '22'
 username = 'root'  
 password = 'root'  
 
@@ -83,25 +83,25 @@ def ssh_connect_command(logfile,ip,port,username,password,command):
             if status==0:
                 print("已经连接到该主机%s:%s，%s命令执行成功" %(ip,port,command))
                 #打印执行的命令
-                #print (stdout.read().decode('utf-8'))
+                print (stdout.read().decode('utf-8'))
             else:
                 print("执行命令%s报错,请查看日志"% (status,logfile))
                 log.error(str(stderr.read()))
                 print (stderr.read().decode('utf-8'))
                 sessions=ip+":"+port
                 #执行命令异常的IP写入到数据库，这里是写入到一个配置文件中
-                add_config(logfile,sessions,ip,port,username,password)
+                add_config(conf_ini,sessions,ip,port,username,password)
         except Exception as e:
             print ("执行命令%s时报错，请看日志" % command,logfile,'\n',stderr.read().decode('utf-8'),log(str(e)))
             sessions=ip+":"+port
             #执行命令异常的IP写入到数据库，这里是写入到一个配置文件中
-            add_config(logfile,sessions,ip,port,username,password)
+            add_config(conf_ini,sessions,ip,port,username,password)
     except Exception as e:
         print ("连接%s:%s时报错，请查看日志%s" % (ip,port,logfile),str(e),'\n',log.error(str(e)))
         #记录IP加端口，将其写入未连接成功的配置文件中
         sessions=ip+":"+port
         #将连接异常的IP写入到数据库，这里是写入到一个配置文件中
-        add_config(logfile,sessions,ip,port,username,password)
+        add_config(conf_ini,sessions,ip,port,username,password)
         
     
     #return ssh  
@@ -157,6 +157,7 @@ def test_ssh_fail_config():
 if __name__=='__main__':
     #ssh_connect(ip,port,username,password,'pwd')
     #test_ssh_config(conf_ini,'ssh')
-    test_ssh_fail_config()
+    #test_ssh_fail_config()
+#     ssh_connect_command(logfile,ip,port,username,password,'top')
     
     
