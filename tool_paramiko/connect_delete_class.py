@@ -87,7 +87,7 @@ class Linux(object):
 #                 return result
 # 主机IP错误，无法连接的情况
 if __name__ == '__main__':
-    host = Linux('192.168.153.135', 'root', 'root')
+    host = Linux('192.168.216.128', 'root', 'root')
     host.connect()
     host.send('pwd')
     host.close()

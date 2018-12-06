@@ -2,6 +2,8 @@
 Created on 2017年7月24日
 
 @author: ning.lin
+
+比较两个文件是，使用difflib模块
 '''
 #coding:utf-8
 import codecs

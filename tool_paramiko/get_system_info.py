@@ -5,7 +5,7 @@ Created on 2017年8月10日
 '''
 
 
-from 一次执行多个命令 import python_ssh_command
+from run_mult_cmds import python_ssh_command
 
 
 ip='192.168.216.128'

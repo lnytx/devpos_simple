@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+'''
+一次性执行多个linux命令
+'''
 import paramiko
 
 from loggingclass import log
@@ -38,5 +41,5 @@ def python_ssh_command(ip, port, username, password,logfile='../logs/command.log
         result = u'无'
         print("异常",str(e))
         return result
-python_ssh_command('192.168.216.128', '22','root', 'root',a='cd /soft',b='ls -l',c='touch 1.log')
+#python_ssh_command('192.168.216.128', '22','root', 'root',a='cd /soft',b='ls -l',c='touch 1.log')
 

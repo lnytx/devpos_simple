@@ -9,9 +9,9 @@ import paramiko
 from loggingclass import log
 
 
-from tool_paramiko.使用配置文件configobj import read_all
-from tool_paramiko.使用配置文件configobj import read_theSames
-from tool_paramiko.使用配置文件configobj import add_config
+from tool_paramiko.use_configobj import read_all
+from tool_paramiko.use_configobj import read_theSames
+from tool_paramiko.use_configobj import add_config
 
 
 ip = '192.168.153.135'

@@ -4,6 +4,7 @@
 Created on 2017年7月20日
 
 @author: ning.lin
+上传下载文件，目录
 '''
 from _stat import S_ISDIR
 from os import path
