@@ -1,6 +1,6 @@
 分享工作中常用的一些小脚本 \
 主要是对paramiko包做的一些小封装 \
-比较两个文件内容差异 \
+
 [比较两文件差异](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/compare_two_files.py) \
 [上传下载目录、文件](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/down_up_files.py) \
 [获取系统信息](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/get_system_info.py) \
