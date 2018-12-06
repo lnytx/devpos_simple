@@ -9,4 +9,7 @@
 [最常用的:远端多命令执行脚本](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/run_mult_cmds.py) \
 [configobj包的使用](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/use_configobj.py) \
 [configparser包的使用(不能追加内容)](https://github.com/lnytx/devpos_simple/blob/master/tool_paramiko/use_configparser.py) \
+
+war包的对比并提取差异文件(公司烂尾非maven项目，一个war包300多M)
+[提取两个war包差异内容方便更新](https://github.com/lnytx/devpos_simple/blob/master/other_tools/com_dir.py)
 其他的就随便看看了
