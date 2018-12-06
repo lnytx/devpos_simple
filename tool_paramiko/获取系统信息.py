@@ -5,10 +5,10 @@ Created on 2017年8月10日
 '''
 
 
-from tool_paramiko.一次执行多个命令 import python_ssh_command
+from 一次执行多个命令 import python_ssh_command
 
 
-ip='192.168.153.135'
+ip='192.168.216.128'
 port=22
 username='root'
 password='root'

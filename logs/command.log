@@ -1,0 +1,8 @@
+2018-12-06 10:32:42,257 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_7.4) transport.py     _log     1746
+2018-12-06 10:32:52,562 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1746
+2018-12-06 10:41:09,741 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_7.4) transport.py     _log     1746
+2018-12-06 10:41:10,200 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1746
+2018-12-06 10:42:01,425 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_7.4) transport.py     _log     1746
+2018-12-06 10:42:11,625 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1746
+2018-12-06 10:43:12,732 paramiko.transport INFO     Connected (version 2.0, client OpenSSH_7.4) transport.py     _log     1746
+2018-12-06 10:43:13,377 paramiko.transport INFO     Authentication (password) successful! transport.py     _log     1746

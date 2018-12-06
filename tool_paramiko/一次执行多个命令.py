@@ -19,7 +19,7 @@ def python_ssh_command(ip, port, username, password,logfile='../logs/command.log
                 status = channel.recv_exit_status()
                 print("status",status)
                 if status==0:
-                    print("已经连接到该主机%s:%s,%s命令执行成功" %(ip,port,shell[key]))
+                    print("已经连接到该主机%s:%s,%s:命令执行成功" %(ip,port,shell[key]))
                     #打印命令输出结果
                     #print (stdout.read().decode('utf-8'))
                 else:
@@ -38,5 +38,5 @@ def python_ssh_command(ip, port, username, password,logfile='../logs/command.log
         result = u'无'
         print("异常",str(e))
         return result
-#python_ssh('192.168.153.135', 'root', 'root',a='cd /soft',b='ls -l',c='touch 1.log')
+python_ssh_command('192.168.216.128', '22','root', 'root',a='cd /soft',b='ls -l',c='touch 1.log')
 
